@@ -13,14 +13,15 @@
 //   buzz
 
 function fizzBuzz(n) {
-    for (var i = 1; i <= 100; i++) {
-        if (i % 3 ==+ 0 && i % 5 === 0) {
-            i++;
-            console.log("FizzBuzz");
-        } else if (i % 3 === 0) {
-            console.log("Fizz");
-        } else if (i % 5 === 0) {
-            console.log("Buzz");
+    let curerntFizzBuzz = 0;
+    for (let i = 1; i <= n; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            curerntFizzBuzz = i;
+            console.log("fizzbuzz");
+        } else if (i % 3 === 0 && i !== curerntFizzBuzz) {
+            console.log("fizz");
+        } else if (i % 5 === 0 && i !== curerntFizzBuzz) {
+            console.log("buzz");
         } else {
             console.log(i);
         }
